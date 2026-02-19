@@ -61,7 +61,7 @@ const computeCollections = (bookmarks: Bookmark[]): BookmarkCollection[] => {
     .sort((a, b) => b.totalVisits - a.totalVisits);
 };
 
-const authHeaders = (token: string | null) =>
+const authHeaders = (token: string | null): Record<string, string> =>
   token
     ? {
         Authorization: `Bearer ${token}`
